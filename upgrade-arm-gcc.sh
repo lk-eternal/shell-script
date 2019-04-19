@@ -7,3 +7,4 @@ curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | sudo apt-
 sudo dpkg --add-architecture armhf
 sudo apt-get update
 sudo apt-get dist-upgrade
+sudo apt-get install virtualbox-guest-dkms virtualbox-guest-x11 linux-headers-$(uname -r)
