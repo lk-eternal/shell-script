@@ -10,5 +10,5 @@ cd opencv-4.0.1
 mkdir build
 cd build
 
-cmake -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc-4.9 -DCMAKE_CXX_COMPILER=/usr/bin/arm-linux-gnueabihf-g++-4.9 ../
+cmake -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabi-gcc-4.9 -DCMAKE_CXX_COMPILER=/usr/bin/arm-linux-gnueabi-g++-4.9 ../
 make -j 4
