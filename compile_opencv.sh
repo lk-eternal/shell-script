@@ -10,5 +10,5 @@ cd opencv-4.0.1
 mkdir build
 cd build
 
-cmake -DCMAKE_C_COMPILER=arm-linux-gnueabi-gcc-4.9 -DCMAKE_CXX_COMPILER=arm-linux-gnueabi-g++-4.9 -DWITH_PROTOBUF=OFF -DWITH_WITH_ADE=OFF -DWITH_CUDA=OFF -DBUILD_TIFF=ON -DCMAKE_INSTALL_PREFIX=/usr/arm-linux-gnueabi/opencv4 -DBUILD_SHARED_LIBS=OFF ../
+cmake -DCMAKE_C_COMPILER=arm-linux-gnueabi-gcc-4.9 -DCMAKE_CXX_COMPILER=arm-linux-gnueabi-g++-4.9 -DWITH_PROTOBUF=OFF -DWITH_ADE=OFF -DWITH_CUDA=OFF -DBUILD_TIFF=ON -DCMAKE_INSTALL_PREFIX=/usr/arm-linux-gnueabi/opencv4 -DBUILD_SHARED_LIBS=OFF ../
 make -j 4
