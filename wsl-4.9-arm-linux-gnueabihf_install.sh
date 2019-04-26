@@ -1,4 +1,9 @@
 cd ~
+    
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+wget https://raw.githubusercontent.com/arkceajin/shell-script/master/sources.list
+sudo cp -f sources.list /etc/apt/sources.list
+
 sudo touch /etc/apt/sources.list.d/crosstools.list
 sudo chmod a+w /etc/apt/sources.list.d/crosstools.list
 sudo echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.list.d/crosstools.list
