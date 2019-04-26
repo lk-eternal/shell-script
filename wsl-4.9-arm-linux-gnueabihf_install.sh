@@ -1,7 +1,7 @@
 cd ~
     
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-wget https://raw.githubusercontent.com/arkceajin/shell-script/master/sources.list
+wget https://raw.githubusercontent.com/lk-eternal/shell-script/master/sources.list
 sudo cp -f sources.list /etc/apt/sources.list
 
 sudo touch /etc/apt/sources.list.d/crosstools.list
