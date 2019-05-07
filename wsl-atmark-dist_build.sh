@@ -5,8 +5,8 @@ wget --no-check-certificate https://users.atmark-techno.com/files/downloads/arma
 tar xzf atmark-dist-20180330.tar.gz
 
 wget --no-check-certificate https://download.atmark-techno.com/armadillo-840/source/linux-3.4-at16.tar.gz
-tar xzf linux-3.4-at26.tar.gz
-ln -s ../linux-3.4-at26 atmark-dist-20180330/linux-3.x
+tar xzf linux-3.4-at16.tar.gz
+ln -s ../linux-3.4-at16 atmark-dist-20180330/linux-3.x
 cd atmark-dist-20180330
 
 make config
