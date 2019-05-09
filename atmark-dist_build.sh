@@ -26,13 +26,9 @@ sudo apt-get install -y glib-2.0
 sudo apt-get install -y libperl-dev
 sudo apt-get install -y libgtk2.0-dev
 sudo apt-get install -y liboobs-1-dev
-sudo apt-get update
-sudo apt-get upgrade
 sudo apt-get install -y glib-2.0:armhf
-
-sudo cp /usr/lib/i386-linux-gnu/libgobject-2.0.* /usr/lib/arm-linux-gnueabihf/
-
-export PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig/
+sudo apt-get install -y libglib2.0-dev:armhf
+export PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig/
 
 ~/atmark-dist-20180330/user/gstreamer/gstreamer1.0/gstreamer1.0-1.0.8/gst/parse/grammar.y
 -int priv_gst_parse_yylex (void * yylval_param , yyscan_t yyscanner);
