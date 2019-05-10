@@ -60,7 +60,7 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/qt5/bin/qmake /usr/bin/qmake
 sudo apt-get install -y qtdeclarative5-dev:armhf
 sudo cp -r /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabi-g++ /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabihf-g++
 sudo sed -i "s/gnueabi/gnueabihf/" /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabihf-g++/qmake.conf
-sudo sed -i '/^CROSS_LIBDIR/s?/usr/$(CROSS_COMPILE:-=)/lib?/usr/lib/$(CROSS_COMPILE:-=)?' ~/atmark-dist-20180330/user/qt5/Makefile
+sudo sed -i 's?$(CROSS_COMPILE:-=)/lib?lib/$(CROSS_COMPILE:-=)?' ~/atmark-dist-20180330/user/qt5/Makefile
 
 sudo sed -i "/#include <sys\/types.h>/a\#include <sys\/resource.h>" ~/atmark-dist-20180330/user/udev/udev-105/udev-105/udevd.c
 
