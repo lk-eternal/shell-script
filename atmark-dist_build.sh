@@ -16,13 +16,13 @@ sudo apt-get install -y libexpat1-dev:armhf
 sudo apt-get install -y libdaemon-dev:armhf
 
 #busybox
-sudo sed -i "s?#include <sys/mman.h>?#include <sys/mman.h>\n#include <sys/resource.h>?" ./user/busybox/busybox-1.20.2/include/libbb.h
+sudo sed -i "/#include <sys\/mman.h>/a\#include <sys\/resource.h>" ./user/busybox/busybox-1.20.2/include/libbb.h
 
 #tcl
 cd ~ && wget --no-check-certificate https://master.dl.sourceforge.net/project/tcl/Tcl/8.4.12/tcl8.4.12-src.tar.gz
 tar xzf tcl8.4.12-src.tar.gz
 cd tcl8.4.12/unix/
-sed -i "s/relid'/relid/" configure
+sudo sed -i "s/relid'/relid/g" configure
 ./configure --prefix=/usr/arm-linux-gnueabihf --disable-shared
 make CC=arm-linux-gnueabihf-gcc
 sudo make install
@@ -61,9 +61,9 @@ sudo apt-get install -y qtbase5-private-dev:armhf
 sudo ln -s /usr/lib/arm-linux-gnueabihf/qt5/bin/qmake /usr/bin/qmake 
 sudo apt-get install -y qtdeclarative5-dev:armhf
 sudo cp -r /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabi-g++ /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabihf-g++
-sudo sed -i "s/arm-linux-gnueabi-/arm-linux-gnueabihf-/" /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabihf-g++/qmake.conf
+sudo sed -i "s/gnueabi/gnueabihf/" /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-arm-gnueabihf-g++/qmake.conf
 
-sudo sed -i "s?#include <sys/types.h>?#include <sys/types.h>\n#include <sys/resource.h>?" ~/atmark-dist-20180330/user/udev/udev-105/udev-105/udevd.c
+sudo sed -i "/#include <sys\/types.h>/a\#include <sys\/resource.h>" ~/atmark-dist-20180330/user/udev/udev-105/udev-105/udevd.c
 
 sudo apt-get install -y gstreamer1.0-alsa:armhf
 sudo apt-get install -y gstreamer1.0-libav:armhf
