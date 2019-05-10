@@ -46,9 +46,7 @@ export PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig/
 
 sudo sed -i "/^int priv_gst_parse_yylex /s/ , yyscan_t yyscanner//" ~/atmark-dist-20180330/user/gstreamer/gstreamer1.0/gstreamer1.0-1.0.8/gst/parse/grammar.y
 
-sudo sed -i "/^int priv_gst_parse_yyget_column  (yyscan_t yyscanner );/d" ~/atmark-dist-20180330/user/gstreamer/gstreamer1.0/build/gst/parse/lex.priv_gst_parse_yy.c
-
-sudo sed -i "/^void priv_gst_parse_yyset_column (int column_no ,yyscan_t yyscanner );/d" ~/atmark-dist-20180330/user/gstreamer/gstreamer1.0/build/gst/parse/lex.priv_gst_parse_yy.c
+sudo sed -i "/^\techo 'static/d" ~/atmark-dist-20180330/user/gstreamer/gstreamer1.0/gstreamer1.0-1.0.8/gst/parse/Makefile.am
 
 sudo apt-get install -y libjpeg-dev:armhf
 sudo apt-get install -y liblzo2-dev:armhf
