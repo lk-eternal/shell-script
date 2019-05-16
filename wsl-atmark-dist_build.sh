@@ -1,6 +1,7 @@
+mkdir ~/armadillo-840-work
+cd ~/armadillo-840-work/
 wget https://download.atmark-techno.com/armadillo-840/source/atmark-dist-20180330.tar.gz
 wget https://download.atmark-techno.com/armadillo-840/source/linux-3.4-at26.tar.gz
-wget https://download.atmark-techno.com/armadillo-840/source/hermit-at-3.11.0-source.tar.gz
 
 tar zxf atmark-dist-20180330.tar.gz
 tar zxf linux-3.4-at26.tar.gz
