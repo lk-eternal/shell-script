@@ -4,7 +4,7 @@ sudo apt-get -y install curl
 echo "deb http://emdebian.org/tools/debian/ jessie main" | sudo tee /etc/apt/sources.list.d/embedian-jessie.list
 curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | sudo apt-key add -
 
-sudo dpkg --add-architecture armel
+sudo dpkg --add-architecture armhf
 sudo apt-get update
 sudo apt-get install -y crossbuild-essential-armhf 
 sudo apt-get update
